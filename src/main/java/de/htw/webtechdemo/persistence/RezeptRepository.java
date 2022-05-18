@@ -1,7 +1,7 @@
-package de.htw.webtechdemo.rezeptbuch;
+package de.htw.webtechdemo.persistence;
 
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import de.htw.webtechdemo.web.api.Rezept;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

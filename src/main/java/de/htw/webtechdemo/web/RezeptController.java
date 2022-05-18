@@ -1,6 +1,8 @@
-package de.htw.webtechdemo.rezeptbuch;
+package de.htw.webtechdemo.web;
 
 
+import de.htw.webtechdemo.service.RezeptService;
+import de.htw.webtechdemo.web.api.Rezept;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +18,9 @@ public class RezeptController {
         return service.save(rezept);
     }
 
+
+    //TODO: Falls der User versucht, zu manipulieren, indem dieser eine falsche ID im Link eingibt,
+    //TODO: soll eine Meldung als String ausgegeben werden und er wird zur vorherigen Seite zurückgeschickt (oder so)
     @GetMapping("/rezepte/{id}")
     public Rezept getRezept (@PathVariable String id) {
         Long rezeptId = Long.parseLong(id);

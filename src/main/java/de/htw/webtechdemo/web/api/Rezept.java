@@ -1,4 +1,4 @@
-package de.htw.webtechdemo.rezeptbuch;
+package de.htw.webtechdemo.web.api;
 
 
 
@@ -16,7 +16,9 @@ public class Rezept {
     private Long id;
     private String rezeptName;
     private int anzahlPerson;
-    //Rezeptbeschreibung Datentypen etc überlegen
+    //Rezeptbeschreibung Datentypen etc überlegen (String)
+    //Liste mit Zutaten
+    //evtl Liste mit Mengen der zutaten oder Mengen der Zutaten aus der oberen Liste rausfiltern
 
     public Rezept() {}
 

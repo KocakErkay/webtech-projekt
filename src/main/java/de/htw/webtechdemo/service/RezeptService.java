@@ -1,5 +1,7 @@
-package de.htw.webtechdemo.rezeptbuch;
+package de.htw.webtechdemo.service;
 
+import de.htw.webtechdemo.persistence.RezeptRepository;
+import de.htw.webtechdemo.web.api.Rezept;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
