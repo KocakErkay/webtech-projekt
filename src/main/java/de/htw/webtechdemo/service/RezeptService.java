@@ -18,4 +18,6 @@ public class RezeptService {
     public Rezept get(Long id) {
         return repo.findById(id).orElseThrow(() -> new RuntimeException());
     }
+
+    //Todo: getAll Methode
 }
