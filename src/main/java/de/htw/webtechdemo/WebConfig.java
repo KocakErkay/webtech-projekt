@@ -1,3 +1,5 @@
+package de.htw.webtechdemo;
+
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
