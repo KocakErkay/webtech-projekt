@@ -2,11 +2,9 @@ package de.htw.webtechdemo.web;
 
 
 import de.htw.webtechdemo.service.RezeptService;
-import de.htw.webtechdemo.web.api.Rezept;
+import de.htw.webtechdemo.persistence.Rezept;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 public class RezeptController {
