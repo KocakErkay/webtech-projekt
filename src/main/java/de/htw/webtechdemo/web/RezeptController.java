@@ -4,7 +4,9 @@ package de.htw.webtechdemo.web;
 import de.htw.webtechdemo.service.RezeptService;
 import de.htw.webtechdemo.persistence.Rezept;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 
 @RestController
 public class RezeptController {
@@ -13,7 +15,7 @@ public class RezeptController {
     RezeptService service;
 
     @PostMapping("/rezepte")
-    public Rezept createRezept(@RequestBody Rezept rezept) {
+    public Rezept createRezept(@AuthenticationPrincipal OidcUser user, @RequestBody Rezept rezept) {
         System.out.println("debug: !!!" + rezept);
         return service.save(rezept);
     }
@@ -22,7 +24,7 @@ public class RezeptController {
     //TODO: Falls der User versucht, zu manipulieren, indem dieser eine falsche ID im Link eingibt,
     //TODO: soll eine Meldung als String ausgegeben werden und er wird zur vorherigen Seite zurückgeschickt (oder so)
     @GetMapping("/rezepte/{id}")
-    public Rezept getRezept (@PathVariable String id) {
+    public Rezept getRezept (@AuthenticationPrincipal OidcUser user, @PathVariable String id) {
         Long rezeptId = Long.parseLong(id);
         return service.get(rezeptId);
     }
