@@ -1,5 +1,6 @@
 package de.htw.webtechdemo;
 
+import de.htw.webtechdemo.persistence.Rezept;
 import de.htw.webtechdemo.persistence.RezeptRepository;
 import de.htw.webtechdemo.service.RezeptService;
 import org.assertj.core.api.WithAssertions;
@@ -55,5 +56,6 @@ public class RezeptServiceTest implements WithAssertions {
         verifyNoMoreInteractions(rezeptRepository);
         assertThat(result).isFalse();
     }
+
 
 }
