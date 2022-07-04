@@ -1,8 +1,6 @@
 package de.htw.webtechdemo.persistence;
 
 
-
-
 import javax.persistence.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,17 +14,15 @@ public class Rezept {
     private String rezeptName;
     @ElementCollection
     private Map<String, Integer> zutaten = new HashMap<String,Integer>();
-    //private int anzahlPerson;
+    private int anzahlPerson;
 
-    //Rezeptbeschreibung Datentypen etc überlegen (String)
-    //Liste mit Zutaten
-    //evtl Liste mit Mengen der zutaten oder Mengen der Zutaten aus der oberen Liste rausfiltern
 
     public Rezept() {}
 
-    public Rezept(String rezeptName, int anzahlPerson) {
+    public Rezept(String rezeptName, int anzahlPerson, Map<String, Integer> zutaten) {
         this.rezeptName = rezeptName;
-        //this.anzahlPerson = anzahlPerson;
+        this.anzahlPerson = anzahlPerson;
+        this.zutaten = zutaten;
     }
 
     public Long getId() {
@@ -45,11 +41,19 @@ public class Rezept {
         this.rezeptName = rezeptName;
     }
 
-    /*public int getAnzahlPerson() {
+    public int getAnzahlPerson() {
         return anzahlPerson;
     }
 
     public void setAnzahlPerson(int anzahlPerson) {
         this.anzahlPerson = anzahlPerson;
-    }*/
+    }
+
+    public Map<String, Integer> getZutaten() {
+        return zutaten;
+    }
+
+    public void setZutaten(Map<String, Integer> zutaten) {
+        this.zutaten = zutaten;
+    }
 }

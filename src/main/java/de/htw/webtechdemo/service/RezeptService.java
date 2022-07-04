@@ -5,6 +5,9 @@ import de.htw.webtechdemo.persistence.Rezept;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class RezeptService {
 
@@ -28,5 +31,10 @@ public class RezeptService {
         return true;
     }
 
-    //Todo: getAll Methode
+    /*public List<Rezept> findAll() {
+        List<Rezept> recipes = repo.findAll();
+        return recipes.stream()
+                .map(personTransformer::transformEntity)
+                .collect(Collectors.toList());
+    }*/
 }
