@@ -19,5 +19,14 @@ public class RezeptService {
         return repo.findById(id).orElseThrow(() -> new RuntimeException());
     }
 
+    public boolean deleteById(Long id) {
+        if (!repo.existsById(id)) {
+            return false;
+        }
+
+        repo.deleteById(id);
+        return true;
+    }
+
     //Todo: getAll Methode
 }

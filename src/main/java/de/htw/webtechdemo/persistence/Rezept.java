@@ -3,10 +3,7 @@ package de.htw.webtechdemo.persistence;
 
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,6 +14,7 @@ public class Rezept {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String rezeptName;
+    @ElementCollection
     private Map<String, Integer> zutaten = new HashMap<String,Integer>();
     //private int anzahlPerson;
 
@@ -28,7 +26,7 @@ public class Rezept {
 
     public Rezept(String rezeptName, int anzahlPerson) {
         this.rezeptName = rezeptName;
-        this.anzahlPerson = anzahlPerson;
+        //this.anzahlPerson = anzahlPerson;
     }
 
     public Long getId() {
@@ -47,11 +45,11 @@ public class Rezept {
         this.rezeptName = rezeptName;
     }
 
-    public int getAnzahlPerson() {
+    /*public int getAnzahlPerson() {
         return anzahlPerson;
     }
 
     public void setAnzahlPerson(int anzahlPerson) {
         this.anzahlPerson = anzahlPerson;
-    }
+    }*/
 }
