@@ -28,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class RezeptRestControllerTest {
 
 
-    @Autowired
+    /*@Autowired
     private MockMvc mockMvc;
 
     @MockBean
@@ -46,7 +46,7 @@ public class RezeptRestControllerTest {
                 .andExpect(status().isNotFound());
     }
 
-    /*@Test
+    *//*@Test
     @DisplayName("should return found persons from person service")
     void should_return_found_person_from_person_service() throws Exception {
         // given
@@ -71,7 +71,7 @@ public class RezeptRestControllerTest {
                 .andExpect(jsonPath("$[1].lastName").value("Thompson"))
                 .andExpect(jsonPath("$[1].gender").value("FEMALE"))
                 .andExpect(jsonPath("$[1].vaccinated").value(true));
-    }*/
+    }*//*
 
     @Test
     public void testGetRoute() throws Exception {
@@ -90,5 +90,5 @@ public class RezeptRestControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(content().string(containsString(expected)));
-    }
+    }*/
 }

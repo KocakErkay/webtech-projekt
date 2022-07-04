@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class RezeptTest {
 
-    @Test
+    /*@Test
     void testToString() {
         //Eingabedaten
         String rezeptName = "Tomatensuppe";
@@ -30,5 +30,5 @@ public class RezeptTest {
 
         //Vergleich
         assertEquals(expected, actual);
-    }
+    }*/
 }
